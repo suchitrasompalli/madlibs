@@ -1,0 +1,51 @@
+{% extends "main.html" %} {% block content %}
+<div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="img">
+        <div class="sidebar-header">
+            <h3>MadLibs Game</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Generate MadLib</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <h1>Play MadLibs game !</h1>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="form-group">
+            <label for="formControlTextarea1"><h2>Make sure your replacement words are in square brackets.</h2></label>
+            <div class="center">
+                <textarea class="form-control" id="formControlTextarea1" rows="6"
+                placeholder="Example: We are [hiking] today. Will [you] come."></textarea>
+                <br/>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+        <div class="line"></div>
+
+    </div>
+
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="img"></div>
+
+    </nav>
+
+</div>
+{% endblock %}
