@@ -10,7 +10,39 @@
 	</head>
 
 	<body class="body-color">
+
+		<div class="wrapper">
+
+		    <!-- Sidebar Holder -->
+		    <nav id="sidebar">
+		        <div class="img">
+		        	<div class="sidebar-header">
+		            	<h3>MadLibs Game</h3>
+		        	</div>
+
+		        	<ul class="list-unstyled components">
+		            	<li>
+		                	<a href="#generate.html">Generate MadLib</a>
+		            	</li>
+
+		        	</ul>
+					<ul class="list-unstyled components">
+
+						<li>
+		                	<a href="#play.html">Play MadLib</a>
+		            	</li>
+		        	</ul>
+		    	</div>
+		    </nav>
 			{% block content %}
 			{% endblock %}
+		   
+
+		<!-- Sidebar Holder -->
+		<nav id="sidebar">
+			<div class="img"></div>
+		</nav>
+
+	</div>
 	</body>
 </html>
