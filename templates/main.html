@@ -1,48 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-	</head>
+<head>
 
-	<body class="body-color">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-		<div class="wrapper">
+    <title>MadLibs Game!</title>
 
-		    <!-- Sidebar Holder -->
-		    <nav id="sidebar">
-		        <div class="img">
-		        	<div class="sidebar-header">
-		            	<h3>MadLibs Game</h3>
-		        	</div>
+    <!-- Bootstrap core CSS -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
 
-		        	<ul class="list-unstyled components">
-		            	<li>
-		                	<a href="#generate.html">Generate MadLib</a>
-		            	</li>
+    <!-- Custom styles for this template -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='simple-sidebar.css') }}">
 
-		        	</ul>
-					<ul class="list-unstyled components">
+</head>
 
-						<li>
-		                	<a href="#play.html">Play MadLib</a>
-		            	</li>
-		        	</ul>
-		    	</div>
-		    </nav>
-			{% block content %}
-			{% endblock %}
-		   
+<body>
 
-		<!-- Sidebar Holder -->
-		<nav id="sidebar">
-			<div class="img"></div>
-		</nav>
+    <div id="wrapper" class="toggled">
 
-	</div>
-	</body>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav margin-top">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        <h3 class="white">MadLibs Game</h3>
+                    </a>
+                </li>
+                <li>
+                    <a class="white" href="/madlibs/">Create a MadLib</a>
+                </li>
+                <li>
+                    <a class="white" href="/madlibs/play">Play MadLib</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <!-- Page Content Holder -->
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <!-- Page Content Holder -->
+                {% block content %}
+                {% endblock %}
+
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
 </html>
